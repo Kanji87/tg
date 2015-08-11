@@ -1,0 +1,23 @@
+.post-item__head {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.post-item__title {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  text-align: center;
+  color: $white;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}

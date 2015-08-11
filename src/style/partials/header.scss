@@ -1,0 +1,80 @@
+.logo {
+    width: 100%;
+    height: 190px;
+    position: relative;
+    display: table;
+    text-align: center;
+    background-color: $black;
+
+    &.fabulous {
+        background-image: url($imgPath + "head_bg.jpg");
+    }
+
+    a {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+    }
+
+    h1 {
+        font-size: 3.5em;
+        color: $white;
+        display: inline-block;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-family: 'Roboto Condensed', sans-serif;
+        text-shadow: 0 0 20px $black;
+        position: relative;
+
+        &:before,
+        &:after {
+            content: '';
+            width: 120px;
+            height: 120px;
+            display: inline-block;
+            background-image: url($imgPath + 'logo.png');
+            background-repeat: no-repeat;
+            -webkit-background-size: contain;
+            background-size: contain;
+            position: relative;
+            top: 35px;
+            margin: 0 40px;
+        }
+    }
+}
+
+.head-menu {
+    padding: 20px 0;
+    background-color: $white;
+    text-align: center;
+}
+
+.head-menu__item {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.head-menu__item-link {
+    color: $black;
+    font-size: 1.2em;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:visited {
+        color: $black;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $gold;
+    }
+
+    &.unactive {
+        color: $grey;
+        cursor: default;
+    }
+}
