@@ -6,6 +6,11 @@
     text-align: center;
     background-color: $black;
 
+    @include respond-to(desktop) {
+        height: auto;
+        padding: 20px 0;
+    }
+
     &.fabulous {
         background-image: url($imgPath + "head_bg.jpg");
     }
@@ -42,6 +47,17 @@
             position: relative;
             top: 35px;
             margin: 0 40px;
+
+            @include respond-to(tablet) {
+                width: 40px;
+                height: 40px;
+                margin: 0 20px;
+                top: 0;
+            }
+
+            @include respond-to(fablet) {
+                display: none;
+            }
         }
     }
 }
@@ -55,6 +71,10 @@
 .head-menu__item {
     display: inline-block;
     margin: 0 20px;
+
+    @include respond-to(phone) {
+        margin: 0 5px;
+    }
 }
 
 .head-menu__item-link {

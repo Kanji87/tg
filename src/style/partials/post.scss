@@ -1,0 +1,50 @@
+.post {
+  padding: 40px 0;
+
+  p {
+    padding: 0 40px;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    counter-reset: listNum;
+    padding-left: 85px;
+    padding-right: 40px;
+  }
+
+  li {
+    counter-increment: listNum;
+    position: relative;
+    margin-bottom: 30px;
+
+    &:before {
+      content: counter(listNum);
+      position: absolute;
+      top: -5px;
+      left: -65px;
+      letter-spacing: -3px;
+      display: block;
+      width: 45px;
+      text-align: center;
+      font-size: 2em;
+      color: #ffbf00;
+      font-weight: 700;
+      font-family: roboto;
+    }
+
+    img {
+      display: block;
+      margin-top: 20px;
+    }
+  }
+}
+
+.post-img {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.post-title {
+  @extend .post-item__title;
+  font-size: 3em;
+}

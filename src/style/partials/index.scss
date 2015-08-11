@@ -1,18 +1,24 @@
+.post-item {
+  padding-bottom: 20px;
+}
+
 .post-item__head {
   position: relative;
+  margin-bottom: 30px;
+}
 
-  &:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-  }
+.post-item__link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
 }
 
 .post-item__title {
   position: absolute;
+  z-index: 10;
   bottom: 50px;
   width: 100%;
   text-align: center;
@@ -20,4 +26,23 @@
   font-size: 2.5em;
   text-transform: uppercase;
   line-height: 1.2;
+  text-shadow: 0 0 30px #333;
+
+  @include respond-to(fablet) {
+    bottom: 30px;
+  }
+
+  @include respond-to(phone) {
+    position: relative;
+    bottom: initial;
+    color: $black;
+    text-shadow: none;
+    margin-top: 20px;
+  }
+}
+
+.post-item__text {
+  font-size: 1.2em;
+  padding: 0 20px;
+  margin-bottom: 20px;
 }

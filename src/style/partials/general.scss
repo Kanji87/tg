@@ -6,7 +6,8 @@ general.scss
 $phone: 320px;
 $fablet: 580px;
 $tablet: 768px;
-$desktop: 1060px;
+$desktop: 1071px;
+$large: 1220px;
 
 // Colors
 $black: #333333;
@@ -32,14 +33,14 @@ $imgPath: "../img/";
       @content;
     }
   } @else if $media == desktop {
-    @media only screen and (max-width: $desktop) {
+    @media only screen and (max-width: $large - 1) {
       @content;
     }
-  } /*@else if $media == large {
+  } @else if $media == large {
     @media only screen and (max-width: $large) {
       @content;
     }
-  }*/
+  }
 }
 
 /* Styles */
@@ -58,6 +59,18 @@ body {
   letter-spacing: normal;
   -webkit-font-smoothing: antialiased;
   line-height: 1.4;
+
+  @include respond-to(tablet) {
+    font-size: 16px;
+  }
+
+  @include respond-to(fablet) {
+    font-size: 14px;
+  }
+
+  @include respond-to(phone) {
+    font-size: 12px;
+  }
 }
 
 ul, ol {
@@ -108,6 +121,16 @@ img {
   width: 1200px;
   margin: 200px auto 100px auto;
   position: relative;
+
+  @include respond-to(desktop) {
+    width: 1000px;
+  }
+
+  @include respond-to(tablet) {
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 0;
+  }
 }
 
 .clearfix {
@@ -128,11 +151,25 @@ img {
   width: 900px;
   margin-right: 50px;
   background-color: $white;
+
+  @include respond-to(desktop) {
+    width: 700px;
+  }
+
+  @include respond-to(tablet) {
+    float: none;
+    width: 100%;
+  }
 }
 
 .sidebar {
   width: 250px;
   background-color: $black;
+
+  @include respond-to(tablet) {
+    padding-top: 20px;
+    width: 100%;
+  }
 }
 
 .js-makeit-fabulous {
@@ -154,5 +191,52 @@ img {
 }
 
 #vk_groups {
+
   margin-bottom: 30px;
+
+  @include respond-to(tablet) {
+    padding-left: 30px;
+    box-sizing: border-box;
+    width: 50% !important;
+    float: left;
+  }
+
+  @include respond-to(fablet) {
+    padding-left: 0;
+    width: 500px !important;
+    float: none;
+    margin: 0 auto;
+
+    iframe {
+      width: 100%;
+    }
+  }
+
+  @include respond-to(phone) {
+    width: 300px !important;
+  }
+
+}
+
+[id^=twitter-widget] {
+
+  @include respond-to(tablet) {
+    padding-right: 30px !important;
+    box-sizing: border-box;
+    float: left;
+    width: 50% !important;
+  }
+
+  @include respond-to(fablet) {
+    padding: 0 !important;
+    float: none;
+    display: block !important;
+    width: 500px !important;
+    margin: 0 auto !important;
+  }
+
+  @include respond-to(phone) {
+    width: 300px !important;
+  }
+
 }
