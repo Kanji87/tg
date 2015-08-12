@@ -1,0 +1,172 @@
+.podcast-item {
+  padding: 40px 0;
+
+  @include respond-to(phone) {
+    padding: 20px 0;
+  }
+
+  &:after {
+    content: '';
+    width: 90%;
+    height: 60px;
+    display: block;
+    margin: 50px auto;
+    background-image: url($imgPath + 'sepor.png');
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center 0;
+
+    @include respond-to(fablet) {
+      height: 40px;
+      margin: 30px auto;
+    }
+  }
+
+  &:last-child:after {
+    background: 0;
+    margin: 0;
+  }
+}
+
+.podcast-item__title {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding: 0 40px;
+
+  @include respond-to(phone) {
+    padding: 0 20px;
+  }
+}
+
+.podcast-item__img {
+  margin-bottom: 20px;
+}
+
+.podcast-item__text {
+  margin-bottom: 50px;
+  font-size: 1.2em;
+  padding: 0 40px;
+
+  @include respond-to(phone) {
+    margin-bottom: 30px;
+    padding: 0 20px;
+  }
+}
+
+.podcast-item__links {
+
+  background-color: $gold;
+  padding: 40px;
+
+  @include respond-to(phone) {
+    padding: 20px;
+    text-align: center;
+  }
+
+}
+
+.podcast-item__link {
+  display: inline-block;
+  margin-right: 50px;
+  height: 40px;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+
+  @include respond-to(fablet) {
+    margin-right: 20px;
+  }
+
+  @include respond-to(phone) {
+    width: 60%;
+    background-position: center;
+    margin: 0 auto 20px auto;
+    display: block;
+
+    &:last-child {
+      margin: 0 auto;
+    }
+  }
+}
+
+.podster {
+  width: 150px;
+  background-image: url($imgPath + 'podster_logo.png');
+
+  @include respond-to(fablet) {
+    width: 120px;
+  }
+}
+
+.itunes {
+  width: 110px;
+  background-image: url($imgPath + 'itunes_logo.png');
+
+  @include respond-to(fablet) {
+    width: 80px;
+  }
+}
+
+.youtube {
+  width: 115px;
+  background-image: url($imgPath + 'youtube_logo.png');
+
+  @include respond-to(fablet) {
+    width: 85px;
+  }
+}
+
+.post-img--podcast {
+  background-color: $black;
+}
+
+.post-img--podcast__img {
+  display: block;
+  height: 350px;
+
+  @include respond-to(fablet) {
+    height: 250px;
+  }
+
+  @include respond-to(phone) {
+    height: 110px;
+  }
+}
+
+.post-img--podcast__gowa {
+  width: 250px;
+  float: left;
+
+  @include respond-to(fablet) {
+    width: 150px;
+  }
+
+  @include respond-to(phone) {
+    width: 70px;
+  }
+}
+
+.post-img--podcast__belkin {
+  width: 300px;
+  float: right;
+
+  @include respond-to(fablet) {
+    width: 200px;
+  }
+
+  @include respond-to(phone) {
+    width: 85px;
+  }
+}
+
+.post-title--podcast {
+  @include respond-to(fablet) {
+    color: $white;
+  }
+  @include respond-to(phone) {
+    position: absolute;
+    bottom: 30px;
+  }
+}

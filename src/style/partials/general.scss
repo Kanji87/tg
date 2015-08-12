@@ -139,6 +139,10 @@ img {
     content:'';
     display: table;
   }
+
+  &:after {
+    clear: both;
+  }
 }
 
 .content,
