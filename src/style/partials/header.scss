@@ -11,10 +11,6 @@
         padding: 20px 0;
     }
 
-    &.fabulous {
-        background-image: url($imgPath + "head_bg.jpg");
-    }
-
     a {
         position: absolute;
         top: 0;
@@ -97,4 +93,10 @@
         color: $grey;
         cursor: default;
     }
+}
+
+.fabulous {
+    background-image: url($imgPath + "head_bg.jpg") !important;
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
 }
